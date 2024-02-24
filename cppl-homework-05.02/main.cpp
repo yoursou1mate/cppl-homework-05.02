@@ -40,6 +40,15 @@ public:
         std::cout << "Copying constructor worked" << std::endl;
     }
     
+    twoDimArray& operator=(const twoDimArray &other)
+    {
+        if(&other != this)
+        {
+            arr = other.arr;
+        }
+        return *this;
+    }
+    
     void set(int r, int c, T val)
       {
         arr[r][c] = val;
